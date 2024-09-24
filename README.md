@@ -69,11 +69,11 @@ Register your application with Discord to obtain an OAuth client ID and secret.
 Add these credentials to the .env file.
 Usage Instructions
 **Registration:**
-Visit the registration page at https://your-vm-ip/register.php.
+Visit the registration page at http://your-vm-ip/viewsregister.php.
 Provide the required details: username, password, and additional custom data.
 After registration, you'll be able to log in.
 **Login:**
-Navigate to the login page at https://your-vm-ip/login.php to log in using your credentials.
+Navigate to the login page at http://your-vm-ip/viewslogin.php to log in using your credentials.
 
 **Secure Pages:**
 Once logged in, access the secure dashboard where you can:
