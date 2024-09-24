@@ -37,51 +37,54 @@ Ensure you have the following software installed on your machine:
    git clone https://github.com/DipPandey/Web-App-with-OAuth-and-Permissions-and-API-use.git
    cd Web-App-with-OAuth-and-Permissions-and-API-use
 
-   Set up the database:
+   # Web Application with OAuth, Permissions, and API Use
 
-Create a MySQL database for the app:
-sql
-Copy code
-CREATE DATABASE secure_app;
-USE secure_app;
+This application showcases secure web development techniques, including secure authentication, OAuth, encryption of user data, API usage for features, and permission restrictions between different users. It also includes a visual dashboard for the application.
+
+## Setup Instructions
+
+### 1. Set Up the Database:
+
+1. Create a MySQL database for the app:
+   ```sql
+   CREATE DATABASE secure_app;
+   USE secure_app;
 Run the SQL scripts provided in the /database/ folder to create the necessary tables (users, roles, access_logs).
+
 Modify the /config/db.php file to add your database credentials.
-Install dependencies: Install the required PHP packages using Composer:
 
-bash
-Copy code
+**2. Install Dependencies:**
+Install the required PHP packages using Composer:
+
+
 composer install
-Configure the environment:
-
-Rename the .env.example file to .env and add your environment variables, such as MySQL credentials and API keys (for the IP, Profanity, and Words API).
+**3. Configure the Environment:**
+Rename the .env.example file to .env and add your environment variables (such as MySQL credentials and API keys for the IP, Profanity, and Words API).
 Ensure that your Azure VM has proper SSL configuration for secure HTTPS access.
-Set up the server:
-
+**4. Set Up the Server:**
 Deploy the application on the Azure VM using Apache or Nginx.
 Ensure that the virtual host is configured correctly with SSL (HTTPS).
-Set up OAuth:
-
+**5. Set Up OAuth:**
 Register your application with Discord to obtain an OAuth client ID and secret.
 Add these credentials to the .env file.
-Usage
-Registration:
-
+Usage Instructions
+**Registration:**
 Visit the registration page at https://your-vm-ip/register.php.
 Provide the required details: username, password, and additional custom data.
 After registration, you'll be able to log in.
-Login:
-
+**Login:**
 Navigate to the login page at https://your-vm-ip/login.php to log in using your credentials.
-Secure Pages:
 
+**Secure Pages:**
 Once logged in, access the secure dashboard where you can:
+
 View the custom data provided at registration.
 See the API-based features (e.g., IP to location, profanity filtering, synonyms).
 Admins can manage users and their roles on the permissions page.
 Admin Access:
-
 Only users with the "admin" role can view and manage the access logs and user roles. This can be done from the Permissions page and Access Log page.
-API Documentation
+
+**API Documentation**
 This project uses several APIs for its features. Below is a brief description of each:
 
 IP to Location API: Converts an IP address to a human-readable location. API Documentation
@@ -91,10 +94,13 @@ Security Considerations
 All user passwords are hashed with salt for secure storage.
 User sessions are secured with PHP session management techniques.
 Sensitive user data is encrypted before storage and decrypted on retrieval.
-Troubleshooting
+
+
+**Troubleshooting**
 If you encounter errors with database connections, ensure that your MySQL user has proper permissions and the database is correctly set up.
 For OAuth issues, check that your client ID and secret are correct and your callback URL is configured properly in Discord.
-License
+
+**License**
 This project is licensed under the MIT License.
 
-
+   
